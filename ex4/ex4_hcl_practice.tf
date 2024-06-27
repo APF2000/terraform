@@ -25,10 +25,12 @@ output "bucket_id" {
 	value = aws_s3_bucket.my_bucket.id
 }
 
+# use: local.local_example
 locals {
   local_example = "This is a local variable"
 }
 
+# module inside .tf root folder
 module "my_module" {
   source = "./module-example"
 }
